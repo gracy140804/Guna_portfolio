@@ -34,7 +34,7 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
       ref={ref}
       data-aos={aosType || "fade-up"} 
       data-aos-delay={aosDelay}
-      className={`w-72 sm:w-80 rounded-[2rem] p-2 relative flex flex-col items-center hover:scale-[1.02] transition-all duration-700 z-10 ${className} ${
+      className={`w-full max-w-[300px] sm:max-w-[320px] rounded-[2rem] p-2 relative flex flex-col items-center hover:scale-[1.02] transition-all duration-700 z-10 ${className} ${
         isActive ? 'bg-[#ff2a2a] border-red-400 shadow-[0_20px_50px_rgba(255,42,42,0.4)]' : 'bg-white border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]'
       }`}
     >
@@ -44,14 +44,14 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
       </div>
       
       {/* Inner container */}
-      <div className={`w-full h-full rounded-[1.5rem] mt-8 p-8 flex flex-col min-h-[220px] transition-colors duration-700 ${
+      <div className={`w-full h-full rounded-[1.5rem] mt-8 p-6 sm:p-8 flex flex-col min-h-[220px] transition-colors duration-700 ${
         isActive ? 'bg-red-700/50' : 'bg-[#f4f4f4]'
       }`}>
         <span className={`text-xl font-bold mb-2 font-serif italic transition-colors duration-700 ${
           isActive ? 'text-red-200' : 'text-gray-400'
         }`}>{number}</span>
         
-        <h3 className={`text-2xl font-black mb-3 tracking-tight transition-colors duration-700 ${
+        <h3 className={`text-xl sm:text-2xl font-black mb-3 tracking-tight break-words transition-colors duration-700 ${
           isActive ? 'text-white' : 'text-gray-900'
         }`}>{title}</h3>
         
@@ -186,7 +186,7 @@ const Services = () => {
 
         {/* Mobile Animated Vertical Dashed Line */}
         <svg 
-          className="md:hidden absolute top-0 left-[50%] -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
+          className="md:hidden absolute top-0 left-6 -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
           viewBox="0 0 4 100" 
           preserveAspectRatio="none"
         >
@@ -224,7 +224,7 @@ const Services = () => {
           className="md:hidden absolute z-30 w-24 h-24 -ml-12 -mt-24 mix-blend-multiply"
           style={{ 
             top: useTransform(scrollYProgress, [0, 1], ["0%", "95%"]),
-            left: "50%"
+            left: "24px"
           }}
         >
           <img src={currentAvatar} alt="Builder Avatar" className="w-full h-full object-contain object-bottom" />
@@ -233,7 +233,7 @@ const Services = () => {
 
 
         {/* Cards Container */}
-        <div className="flex flex-col gap-8 md:gap-12 items-center md:block relative z-10 w-full pt-4 md:pt-0 pb-12 md:pb-0">
+        <div className="flex flex-col gap-8 md:gap-12 items-start pl-20 pr-4 md:pl-0 md:pr-0 md:block relative z-10 w-full pt-4 md:pt-0 pb-12 md:pb-0">
           
           <TagCard 
             number="01"

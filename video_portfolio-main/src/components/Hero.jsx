@@ -185,8 +185,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Gunasekar K – Structural Engineer"
-          className="h-[90%] w-auto object-contain object-bottom select-none"
-          style={{ maxWidth: '60%' }}
+          className="h-[60%] md:h-[90%] w-auto object-contain object-bottom select-none max-w-[85%] md:max-w-[60%]"
         />
       </div>
 
@@ -208,7 +207,7 @@ const Hero = () => {
       </div>
 
       {/* ── Main content – bottom-left, same style as original hero ── */}
-      <div className="absolute inset-0 z-20 flex flex-col justify-end pb-20 md:pb-[8%] px-6 md:px-12 max-w-7xl mx-auto w-full">
+      <div className="absolute inset-0 z-20 flex flex-col justify-start pt-32 md:pt-0 md:justify-end pb-20 md:pb-[8%] px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="flex flex-row justify-between items-end w-full">
 
           {/* Left: Text block */}
@@ -229,7 +228,7 @@ const Hero = () => {
             <h1
               data-aos="fade-up"
               data-aos-delay="100"
-              className="text-white text-4xl md:text-6xl font-black mb-2 tracking-tight leading-[1.05]"
+              className="text-white text-3xl sm:text-4xl md:text-6xl font-black mb-2 tracking-tight leading-[1.05]"
             >
               Hi, I'm <br />
               <span className="text-transparent" style={{ WebkitTextStroke: '2px black' }}>

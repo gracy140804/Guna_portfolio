@@ -5,14 +5,14 @@ const Footer = () => {
     <footer className="bg-[#111111] text-[#d4d4d4] py-16 px-6 md:px-12 w-full font-mono text-[10px] md:text-xs tracking-widest flex flex-col justify-between min-h-[50vh]">
       
       {/* Top Row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full font-medium">
         <div className="flex flex-col gap-1">
           <p>Structural Analysis</p>
           <p>Reinforced Concrete Design</p>
           <p>Construction Materials</p>
         </div>
         
-        <div className="flex flex-col gap-1 md:items-center">
+        <div className="hidden md:flex flex-col gap-1 md:items-center">
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
@@ -23,7 +23,7 @@ const Footer = () => {
 
       {/* Middle Huge Text */}
       <div className="w-full flex justify-center items-center py-20 md:py-24 overflow-hidden">
-        <h2 className="text-[14vw] md:text-[14vw] leading-none font-sans font-bold tracking-tighter select-none text-[#f4f4f4] w-full text-center">
+        <h2 className="text-[11vw] md:text-[14vw] leading-none font-sans font-bold tracking-tighter select-none text-[#f4f4f4] w-full text-center">
           Gunasekar
         </h2>
       </div>

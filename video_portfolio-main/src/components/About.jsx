@@ -49,7 +49,7 @@ const About = () => {
                 key={skill}
                 data-aos="zoom-in" 
                 data-aos-delay={300 + (index * 100)}
-                className="px-6 py-3 bg-black/20 backdrop-blur-sm border-2 border-black/30 rounded-full text-black font-black text-xl tracking-wider hover:scale-110 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer shadow-xl"
+                className="px-4 py-2 md:px-6 md:py-3 bg-black/20 backdrop-blur-sm border-2 border-black/30 rounded-full text-black font-black text-sm md:text-xl tracking-wider hover:scale-110 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer shadow-xl"
               >
                 {skill}
               </div>

@@ -86,7 +86,7 @@ const Preloader = () => {
               initial={{ opacity: 0, scale: 0.85, letterSpacing: "0em" }}
               animate={{ opacity: 1, scale: 1, letterSpacing: "0.2em" }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
-              className="relative text-5xl md:text-7xl font-black uppercase text-white drop-shadow-2xl z-40"
+              className="relative text-[11vw] sm:text-5xl md:text-7xl font-black uppercase text-white drop-shadow-2xl z-40"
             >
               <span>Gunasekar</span>
               <motion.span 
@@ -104,7 +104,7 @@ const Preloader = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
-              className="mt-6 text-xs md:text-sm font-black tracking-[0.5em] text-black/60 uppercase"
+              className="mt-6 text-[9px] sm:text-xs md:text-sm font-black tracking-[0.2em] sm:tracking-[0.5em] text-black/60 uppercase text-center"
             >
               Structural Engineer
             </motion.div>
