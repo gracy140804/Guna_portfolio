@@ -184,56 +184,54 @@ const Services = () => {
           </motion.div>
         </div>
 
-        {/* Mobile Animated Vertical Dashed Line */}
-        <svg 
-          className="md:hidden absolute top-0 left-6 -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
-          viewBox="0 0 4 100" 
-          preserveAspectRatio="none"
-        >
-          <path 
-            d="M 2,0 L 2,100" 
-            fill="none" 
-            stroke="#cbd5e1" 
-            strokeWidth="4" 
-            strokeDasharray="4 6" 
-            vectorEffect="non-scaling-stroke"
-          />
-          <mask id="path-mask-mobile">
-            <motion.path 
-              d="M 2,0 L 2,100" 
-              fill="none" 
-              stroke="white" 
-              strokeWidth="4" 
-              style={{ pathLength }}
-              vectorEffect="non-scaling-stroke"
-            />
-          </mask>
-          <path 
-            d="M 2,0 L 2,100" 
-            fill="none" 
-            stroke="black" 
-            strokeWidth="4" 
-            strokeDasharray="4 6" 
-            mask="url(#path-mask-mobile)"
-            vectorEffect="non-scaling-stroke"
-          />
-        </svg>
-
-        {/* The Sliding Builder Avatar (Mobile) */}
-        <motion.div 
-          className="md:hidden absolute z-30 w-24 h-24 -ml-12 -mt-24 mix-blend-multiply"
-          style={{ 
-            top: useTransform(scrollYProgress, [0, 1], ["0%", "95%"]),
-            left: "24px"
-          }}
-        >
-          <img src={currentAvatar} alt="Builder Avatar" className="w-full h-full object-contain object-bottom" />
-        </motion.div>
-
-
-
         {/* Cards Container */}
         <div className="flex flex-col gap-8 md:gap-12 items-start pl-20 pr-4 md:pl-0 md:pr-0 md:block relative z-10 w-full pt-4 md:pt-0 pb-12 md:pb-0">
+          
+          {/* Mobile Animated Vertical Dashed Line */}
+          <svg 
+            className="md:hidden absolute top-0 left-6 -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
+            viewBox="0 0 4 100" 
+            preserveAspectRatio="none"
+          >
+            <path 
+              d="M 2,0 L 2,100" 
+              fill="none" 
+              stroke="#cbd5e1" 
+              strokeWidth="4" 
+              strokeDasharray="4 6" 
+              vectorEffect="non-scaling-stroke"
+            />
+            <mask id="path-mask-mobile">
+              <motion.path 
+                d="M 2,0 L 2,100" 
+                fill="none" 
+                stroke="white" 
+                strokeWidth="4" 
+                style={{ pathLength }}
+                vectorEffect="non-scaling-stroke"
+              />
+            </mask>
+            <path 
+              d="M 2,0 L 2,100" 
+              fill="none" 
+              stroke="black" 
+              strokeWidth="4" 
+              strokeDasharray="4 6" 
+              mask="url(#path-mask-mobile)"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
+
+          {/* The Sliding Builder Avatar (Mobile) */}
+          <motion.div 
+            className="md:hidden absolute z-30 w-24 h-24 -ml-12 -mt-24 mix-blend-multiply"
+            style={{ 
+              top: useTransform(scrollYProgress, [0, 1], ["0%", "95%"]),
+              left: "24px"
+            }}
+          >
+            <img src={currentAvatar} alt="Builder Avatar" className="w-full h-full object-contain object-bottom" />
+          </motion.div>
           
           <TagCard 
             number="01"
