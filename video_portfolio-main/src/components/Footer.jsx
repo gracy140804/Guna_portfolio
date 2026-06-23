@@ -13,8 +13,6 @@ const Footer = () => {
         </div>
         
         <div className="flex flex-col gap-1 md:items-center">
-
-          <a href="#work" className="underline hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Work</a>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">

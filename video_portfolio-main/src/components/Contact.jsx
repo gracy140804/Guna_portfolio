@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Contact = () => {
@@ -10,6 +10,28 @@ const Contact = () => {
   
   // Parallax translation for the big text
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "30%"]);
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { firstName, lastName, email, message } = formData;
+    const subject = `Contact from Portfolio: ${firstName} ${lastName}`;
+    const body = `${message}\n\n---\nReply to: ${email}`;
+    window.location.href = `mailto:gunasekarjaha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   return (
     <section ref={ref} id="contact" className="bg-[#0a0a0a] w-full min-h-screen relative overflow-hidden flex items-end pt-32 pb-0 md:pb-0 border-t border-gray-900">
@@ -36,7 +58,7 @@ const Contact = () => {
             Reach Us
           </div>
 
-          <form className="flex flex-col gap-12 md:gap-16 w-full">
+          <form className="flex flex-col gap-12 md:gap-16 w-full" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row gap-12 md:gap-20 w-full">
               {/* Left Column */}
               <div className="flex-1 flex flex-col gap-10">
@@ -45,6 +67,8 @@ const Contact = () => {
                     type="text" 
                     id="firstName" 
                     placeholder="First Name" 
+                    value={formData.firstName}
+                    onChange={handleChange}
                     className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                   />
                 </div>
@@ -53,6 +77,8 @@ const Contact = () => {
                     type="text" 
                     id="lastName" 
                     placeholder="Last Name" 
+                    value={formData.lastName}
+                    onChange={handleChange}
                     className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                   />
                 </div>
@@ -61,6 +87,8 @@ const Contact = () => {
                     type="email" 
                     id="email" 
                     placeholder="Email" 
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium rounded-none"
                   />
                 </div>
@@ -72,6 +100,8 @@ const Contact = () => {
                   <textarea 
                     id="message" 
                     placeholder="Type your message here" 
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full h-full min-h-[120px] bg-transparent border-b border-white/40 pb-3 text-lg focus:outline-none focus:border-white transition-colors placeholder-white font-medium resize-none rounded-none"
                   ></textarea>
                 </div>
